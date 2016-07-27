@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "PSN Data Volume",
+  "description": "This extension highlights your ip in the psn volume file of zeik.uni-potsdam.de/psn",
+  "version": "1.0",
+  "content_scripts": [
+	{
+		"matches": [
+			"http://www.uni-potsdam.de/u/zeik/psn/studheim-sdg"
+		],
+		"js": ["jquery-3.1.0.min.js", "content.js"]
+	}
+  ],
+  "browser_action": {
+    "default_icon": "favicon.png",
+	"default_title": "PSN Data Volume"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background" : { 
+	"scripts": ["background.js"],
+    "persistent": false
+  }
+}
